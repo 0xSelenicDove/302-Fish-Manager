@@ -29,7 +29,7 @@
 1. 运行主程序：
 
     ```
-    python ModelTrainingTool.py
+    python main.py
     ```
 2. 在界面中输入你的 302.AI API KEY。
 3. 输入你想给模型起的名字（Model Title）。
