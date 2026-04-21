@@ -5,7 +5,7 @@ import os
 class FishAudioClient:
     def __init__(self, api_key):
         self.api_key = api_key
-        self.endpoint = "https://api.302.ai/fish-audio/model"
+        self.endpoint = "https://api.fish.audio/model"
 
     def train_model(self, title, visibility, voices, description="", cover_image=None):
         headers = {"Authorization": f"Bearer {self.api_key}"}
