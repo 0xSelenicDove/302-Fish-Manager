@@ -110,4 +110,29 @@ class VoiceTrainerUI(ctk.CTk):
 
         # 3. 准备 UI 状态
         self.btn_train.configure(state="disabled")
-        self
+        self.progress.set(0.3)
+
+        # 4. 调用 API Client
+        try:
+            client = FishAudioClient(api_key)
+            response = client.train_model(
+                title=title,
+                visibility=visibility,
+                voices=self.selected_voices,
+                description=description,
+                cover_image=self.selected_cover
+            )
+
+            self.progress.set(1.0)
+
+            if response.status_code == 201:
+                result = response.json()
+                messagebox.showinfo("Success", f"Model created!\nID: {result.get('id')}")
+            else:
+                messagebox.showerror("API Error", f"Status: {response.status_code}\n{response.text}")
+
+        except Exception as e:
+            messagebox.showerror("System Error", f"An unexpected error occurred: {str(e)}")
+        finally:
+            self.btn_train.configure(state="normal")
+            self.progress.set(0)
