@@ -1,4 +1,4 @@
-# Fish-TTS Text-to-Speech Model Training Tool
+# Fish-TTS Text-to-Speech Model Management Tool
 这是一套基于 CustomTkinter 开发的桌面端工具，旨在通过 302.AI 提供的 Fish Audio 接口，让用户能够更便捷地通过上传自定义音频文件来训练独有的 TTS 模型。
 
 ## ✨ 核心特性
