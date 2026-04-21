@@ -1,5 +1,5 @@
 # Fish-TTS Text-to-Speech Model Management Tool
-这是一套基于 CustomTkinter 开发的桌面端工具，旨在通过 302.AI 提供的 Fish Audio 接口，让用户能够更便捷地通过上传自定义音频文件来训练独有的 TTS 模型。
+这是一套基于 CustomTkinter 开发的桌面端工具，旨在通过 Fish Audio 官方提供的 API 接口，让用户能够更便捷地通过上传自定义音频文件来训练独有的 TTS 模型。
 
 ## ✨ 核心特性
 
@@ -11,7 +11,7 @@
 
 - **参数自定义**：支持设置模型名称（Title）、描述（Description）以及可见性（Visibility）。
 
-- **针对 302.AI 优化**：自动配置 train_mode: fast 和 type: tts 等必填参数，简化用户操作。
+- **针对官方 API 优化**：自动配置 train_mode: fast 和 type: tts 等必填参数，简化用户操作。
 
 ## 🛠️ 安装与准备
 1. 克隆仓库
@@ -31,10 +31,10 @@
     ```
     python main.py
     ```
-2. 在界面中输入你的 302.AI API KEY。
+2. 在界面中输入你的 fish-audio API key。
 3. 输入你想给模型起的名字（Model Title）。
 4. 点击 Select Audio Files 选择用于训练的音频样本。
-5. 点击 Start Training 开始上传并训练。训练成功后，你将获得一个 Model ID，你可以将其用于 moeru-ai/airi 或其他支持 IndexTTS 的项目。
+5. 点击 Start Training 开始上传并训练。训练成功后，你将获得一个 Model ID，你可以将其用于支持 Fish-audio 的项目。
 
 ## 📦 打包为独立程序 (.exe)
 如果你想在没有 Python 环境的电脑上运行，可以使用 PyInstaller 将其打包：
